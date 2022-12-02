@@ -1,0 +1,176 @@
+header{
+    width: 100%;
+    position: absolute;
+    z-index: 99999;
+    .port{
+        @include styleCenter($w-1,$pd-2);
+        margin: auto;
+        .logo{
+            padding-left: $pd-3;
+            position: relative;
+            line-height: 0;
+            float: left;
+            z-index: 6;
+            .logo1{
+                position: absolute;
+                top : 0;
+                left: 0;
+                .logo2{
+                    transition: all 100ms linear;
+                    position: relative;
+                }
+            }
+        }
+        .menuport{
+            font-size: $fs-7;
+            position: relative;
+            .navbar{
+                float:right;
+                .nav-item{
+                    padding: 0 37px 0 0;
+                    position: relative;
+                    .nav-link{
+                        @include styleText($fs-7,$fw-2,$color-dark-2);
+                        position: relative;
+                        &::after{
+                            content: ' ';
+                            display: block;
+                            position: absolute;
+                            z-index: 5;
+                            margin-left: -4px;
+                            left: 50%;
+                            pointer-events: none;
+                            height: 8px;
+                            width: 8px;
+                            border-radius: 50%;
+                            top : 50px;
+                            transition: 300ms ease all;
+                            background-color: #b61984;
+                            transform: scale(0);
+                         }
+                        &:hover{
+                            &::after{
+                                transform: scale(1.5);
+                             }
+                            }
+                       }
+                    .active{
+                        &::after{
+                            transform: scale(1.1);
+                            }
+                        &:hover{
+                            &::after{
+                                transform: scale(1.5);
+                                &:hover{
+                                    transform: scale(1.5);
+                                }
+                             }
+                            }
+                        }
+                        .submenu{
+                            position: absolute;
+                            width: 220px;
+                            top: 51px;
+                            box-shadow: 0 0 10px 0 rgb(204 204 204 / 50%);
+                            transform: scale(.9);
+                            transition: 300ms ease all;
+                            list-style: none;
+                            opacity: 0;
+                            .menuitem{
+                                font-size: $fs-2;
+                                .item1{
+                                    @include styleText($fs-1,$fw-2,$color-dark-2);
+                                    padding-left: 1.5em;
+                                    padding-right: 1.5em;
+                                    line-height: 1.7;
+                                    display: block;
+                                    position: relative;
+                                    padding: 1em 1em;
+                                    transition: 300ms ease all;
+                                    text-decoration: none;
+                                    &::after{
+                                        content: ' ';
+                                        display: block;
+                                        position: absolute;
+                                        left: 1.5em;
+                                        right: 1.5em;
+                                        bottom: 0;
+                                        height: 1px;
+                                        background-color: rgba(0,0,0,.1);
+                                    }
+                                    &:hover{
+                                        color: $color-violet-1;
+                                    }
+                                }
+                                .item2{
+                                    color :$color-violet-1;
+                                }
+                            }
+                        }
+                        &:hover{
+                            .submenu{
+                                opacity: 1;
+                            }
+                        }
+                }
+                .topbarinmenu{
+                    float: right;
+                    height: 80px;
+                    margin-left: $mg-1;
+                    display: flex;
+                    align-items: center;
+                    .topbarinmenucell{
+                        @include styleHight($lh-2,$fs-2);
+                        display: flex;
+                        align-items: center;
+                        .topbarinmenucells{
+                             @include styleHight($lh-1,$fs-4);
+                             display: inline-block;
+                            width: auto;
+                            .buttonlink{
+                               color: #fff;
+                               font-weight: 500;
+                                @include styleButton($radius-1,$pd-4,$pd-5);
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                position: relative;
+                                overflow: hidden;
+                                margin: 6px;
+                                text-align: center;
+                                background: transparent;
+                                transition: all 300ms ease;
+                                box-shadow: 0 0 0 3em #b61984 inset;
+                                line-height: 1;
+                                text-decoration: none;
+                                .icon{
+                                    padding-right: $pd-3;
+                                }
+                                &:hover{
+                                    box-shadow: 0 0 0 1px $color-violet-1 inset;
+                                    color: $color-violet-1;
+                                }
+                              }
+                            }
+                            .logo3{
+                                   margin-left: $mg-1; 
+                                   @include styleText($fs-2,$fw-1,$color-dark-2);
+                                   .icon1{
+                                    display: inline-block;
+                                    font-size: 1.25em;
+                                   }
+                                   .icon1{
+                                     transition:  all 250ms ease ;
+                                    &:hover{
+                                        color : $color-violet-1;
+                                    }
+                                   }
+                            }
+
+                        }
+              }
+              }
+           }
+        }
+
+}

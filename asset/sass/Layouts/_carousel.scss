@@ -1,0 +1,59 @@
+.carousel{
+    position: relative;
+    .carousel1{
+        z-index: 3;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        padding-top: $pd-7;
+        padding-bottom: $pd-7;
+        .carousel_content{
+            width: $w-2;
+                .carousel_item1{
+                    width: 100%;
+                    .carousel__text{
+                        text-align: left;
+                        .title{
+                            @include styleText($fs-8,$fw-4,$color-dark-2);
+                            padding:30% 20px 0;
+                            
+                            .text{
+                                @include styleText($fs-9,$fw-2,$color-violet-1);
+                                display: block;
+                                position: relative;
+                                 z-index: 1;
+                                 margin-bottom: 0.5em;
+                            }
+                            .text1{
+                                display: block;
+                                @include styleText($fs-10,$fw-4,$color-dark-2);
+                            }
+                        }
+                    }
+                }
+        }
+    }
+    .carousel2{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      .image{
+            width: 100%;
+            height: auto;
+            display: block;
+
+      }
+    }
+    .carousel3{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        .image1{
+            width: 100%;
+            height: auto;
+            display: block;
+
+        }
+    }
+}

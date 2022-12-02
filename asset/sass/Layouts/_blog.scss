@@ -1,0 +1,68 @@
+.blog{
+    background-color: #dcd1f3;
+    position: relative;
+    .blog1{
+        z-index: 3;
+        position: relative;
+        padding-top: 2em;
+        .blog_content{
+            width: $w-2;
+            margin: auto;
+            .blog_item2{
+                text-align: center;
+                padding-bottom: 40px;
+                .blog_item1{
+                    background-color: rgba(255, 255, 255, 1);
+                    padding-left: 2em;
+                    padding-right: 2em;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    transition: all 300ms ease-in-out;
+                    width: 100%;
+                    transition: all 300ms ease-in-out;
+                    &:hover{
+                        box-shadow: 0 30px 30px -10px rgb(0 0 0 / 20%);
+                    }
+                   
+                    .blog_img{
+                        margin: 0 -2em;
+                        position: relative;
+                        &:hover{
+                            .blog_img1{
+                                
+                                transform: scale3d(1.05,1.05,1.05);
+                            }
+                        }
+                        .blog_img1{
+                            transform: scale3d(1,1,1);
+                            display: block;
+                            max-width: 100%;
+                            height: auto;
+                            transition: all 650ms ease-in-out
+                        }
+                    }
+                  .blog_title{
+                    padding-top: 20px;
+                    .blog_title1{
+                        @include styleText($fs-11,$fw-4,$color-dark-2);
+                        .blog_title2{
+                            @include styleText($fs-6,$fw-2,$color-violet-1);
+                            margin: 4px 0;
+                        }
+                    }
+                }
+                    .blog_text1{
+                        font-weight: 200;
+                        margin-bottom: 2.8em;
+                    }
+
+                }
+            }
+
+        }
+    }
+    .blog2{
+        position: absolute;
+        bottom: 0;
+    }
+}
