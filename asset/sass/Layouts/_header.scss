@@ -1,6 +1,6 @@
 header{
     width: 100%;
-    position: absolute;
+    position: fixed;
     z-index: 99999;
     .port{
         @include styleCenter($w-1,$pd-2);
@@ -174,4 +174,29 @@ header{
            }
         }
 
+}
+@include responsive("large"){
+    .header{
+        position: relative;
+        .img{
+            height: 48px;
+        }
+        .submenu{
+            right:324px  !important;
+            top: 1px !important;
+           
+        }
+        .topbarinmenucell{
+            flex-direction: column  !important;
+        }
+        .buttonlink{
+            position: absolute !important;
+            left: 0 !important;
+        }
+        .iconn{
+            position: absolute !important;
+            left: 20px !important;
+            top : 400px !important;
+        }
+    }
 }
