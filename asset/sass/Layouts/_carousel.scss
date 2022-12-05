@@ -7,8 +7,6 @@
         justify-content: center;
         padding-top: $pd-7;
         padding-bottom: $pd-7;
-        .carousel_content{
-            width: $w-2;
                 .carousel_item1{
                     width: 100%;
                     .carousel__text{
@@ -16,7 +14,6 @@
                         .title{
                             @include styleText($fs-8,$fw-4,$color-dark-2);
                             padding:30% 20px 0;
-                            
                             .text{
                                 @include styleText($fs-9,$fw-2,$color-violet-1);
                                 display: block;
@@ -31,7 +28,7 @@
                         }
                     }
                 }
-        }
+        
     }
     .carousel2{
         position: absolute;

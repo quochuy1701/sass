@@ -26,7 +26,6 @@ header .port .logo {
   padding-left: 0.5em;
   position: relative;
   line-height: 0;
-  float: left;
   z-index: 6;
 }
 header .port .logo .logo1 {
@@ -78,9 +77,6 @@ header .port .menuport .navbar .nav-item .active::after {
   transform: scale(1.1);
 }
 header .port .menuport .navbar .nav-item .active:hover::after {
-  transform: scale(1.5);
-}
-header .port .menuport .navbar .nav-item .active:hover::after:hover {
   transform: scale(1.5);
 }
 header .port .menuport .navbar .nav-item .submenu {
@@ -193,13 +189,16 @@ header .port .menuport .navbar .topbarinmenu .topbarinmenucell .logo3 .icon1:hov
 @media screen and (max-width: 992px) {
   .header {
     position: relative;
+    background-color: #fff !important;
+    z-index: 10000;
   }
   .header .img {
     height: 48px;
+    position: absolute;
+    left: 60px;
   }
   .header .submenu {
-    right: 324px !important;
-    top: 1px !important;
+    left: 55px;
   }
   .header .topbarinmenucell {
     flex-direction: column !important;
@@ -213,6 +212,13 @@ header .port .menuport .navbar .topbarinmenu .topbarinmenucell .logo3 .icon1:hov
     left: 20px !important;
     top: 400px !important;
   }
+  .header .navbar {
+    float: left !important;
+  }
+  .header .navbar-toggler-icon {
+    position: absolute;
+    left: 20px;
+  }
 }
 .carousel {
   position: relative;
@@ -225,22 +231,19 @@ header .port .menuport .navbar .topbarinmenu .topbarinmenucell .logo3 .icon1:hov
   padding-top: 4em;
   padding-bottom: 4em;
 }
-.carousel .carousel1 .carousel_content {
-  width: 1200px;
-}
-.carousel .carousel1 .carousel_content .carousel_item1 {
+.carousel .carousel1 .carousel_item1 {
   width: 100%;
 }
-.carousel .carousel1 .carousel_content .carousel_item1 .carousel__text {
+.carousel .carousel1 .carousel_item1 .carousel__text {
   text-align: left;
 }
-.carousel .carousel1 .carousel_content .carousel_item1 .carousel__text .title {
+.carousel .carousel1 .carousel_item1 .carousel__text .title {
   font-size: 3.8rem;
   font-weight: 700;
   color: #181818;
   padding: 30% 20px 0;
 }
-.carousel .carousel1 .carousel_content .carousel_item1 .carousel__text .title .text {
+.carousel .carousel1 .carousel_item1 .carousel__text .title .text {
   font-size: 1.1rem;
   font-weight: 600;
   color: #b61984;
@@ -249,7 +252,7 @@ header .port .menuport .navbar .topbarinmenu .topbarinmenucell .logo3 .icon1:hov
   z-index: 1;
   margin-bottom: 0.5em;
 }
-.carousel .carousel1 .carousel_content .carousel_item1 .carousel__text .title .text1 {
+.carousel .carousel1 .carousel_item1 .carousel__text .title .text1 {
   display: block;
   font-size: 4.5rem;
   font-weight: 700;
@@ -286,15 +289,11 @@ header .port .menuport .navbar .topbarinmenu .topbarinmenucell .logo3 .icon1:hov
   position: relative;
   padding-top: 2em;
 }
-.blog .blog1 .blog_content {
-  width: 1200px;
-  margin: auto;
-}
-.blog .blog1 .blog_content .blog_item2 {
+.blog .blog1 .blog_item2 {
   text-align: center;
   padding-bottom: 40px;
 }
-.blog .blog1 .blog_content .blog_item2 .blog_item1 {
+.blog .blog1 .blog_item2 .blog_item1 {
   background-color: rgb(255, 255, 255);
   padding-left: 2em;
   padding-right: 2em;
@@ -304,42 +303,43 @@ header .port .menuport .navbar .topbarinmenu .topbarinmenucell .logo3 .icon1:hov
   width: 100%;
   transition: all 300ms ease-in-out;
 }
-.blog .blog1 .blog_content .blog_item2 .blog_item1:hover {
+.blog .blog1 .blog_item2 .blog_item1:hover {
   box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
 }
-.blog .blog1 .blog_content .blog_item2 .blog_item1 .blog_img {
+.blog .blog1 .blog_item2 .blog_item1 .blog_img {
   margin: 0 -2em;
   position: relative;
 }
-.blog .blog1 .blog_content .blog_item2 .blog_item1 .blog_img:hover .blog_img1 {
+.blog .blog1 .blog_item2 .blog_item1 .blog_img:hover .blog_img1 {
   transform: scale3d(1.05, 1.05, 1.05);
 }
-.blog .blog1 .blog_content .blog_item2 .blog_item1 .blog_img .blog_img1 {
+.blog .blog1 .blog_item2 .blog_item1 .blog_img .blog_img1 {
   transform: scale3d(1, 1, 1);
   display: block;
   max-width: 100%;
   height: auto;
   transition: all 650ms ease-in-out;
 }
-.blog .blog1 .blog_content .blog_item2 .blog_item1 .blog_title {
+.blog .blog1 .blog_item2 .blog_item1 .blog_title {
   padding-top: 20px;
 }
-.blog .blog1 .blog_content .blog_item2 .blog_item1 .blog_title .blog_title1 {
+.blog .blog1 .blog_item2 .blog_item1 .blog_title .blog_title1 {
   font-size: 1.55rem;
   font-weight: 700;
   color: #181818;
 }
-.blog .blog1 .blog_content .blog_item2 .blog_item1 .blog_title .blog_title1 .blog_title2 {
+.blog .blog1 .blog_item2 .blog_item1 .blog_title .blog_title1 .blog_title2 {
   font-size: 0.75rem;
   font-weight: 600;
   color: #b61984;
   margin: 4px 0;
 }
-.blog .blog1 .blog_content .blog_item2 .blog_item1 .blog_text1 {
+.blog .blog1 .blog_item2 .blog_item1 .blog_text1 {
   font-weight: 200;
   margin-bottom: 2.8em;
 }
-.blog .blog2 {
+
+.blog2 {
   position: absolute;
   bottom: 0;
 }
@@ -651,30 +651,4 @@ header .port .menuport .navbar .topbarinmenu .topbarinmenucell .logo3 .icon1:hov
 .footer .footer_container .footer_container1 .footer_row .footer_content .btnsubmit:hover {
   box-shadow: 0 0 0 1px #fff inset;
   color: #fff;
-}
-
-@media screen and (max-width: 992px) {
-  .footer {
-    text-align: center;
-  }
-  .menu {
-    margin: 0 222px 20px;
-  }
-  .formbtn {
-    margin-left: 183px;
-  }
-  .footer_icon {
-    margin: 0 205px 50px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .menu {
-    margin: 0 370px 20px;
-  }
-  .footer_icon {
-    margin: 0 356px 64px;
-  }
-  .formbtn {
-    margin-left: 96px;
-  }
 }/*# sourceMappingURL=main.css.map */

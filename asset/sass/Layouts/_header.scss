@@ -9,7 +9,6 @@ header{
             padding-left: $pd-3;
             position: relative;
             line-height: 0;
-            float: left;
             z-index: 6;
             .logo1{
                 position: absolute;
@@ -61,9 +60,6 @@ header{
                         &:hover{
                             &::after{
                                 transform: scale(1.5);
-                                &:hover{
-                                    transform: scale(1.5);
-                                }
                              }
                             }
                         }
@@ -178,13 +174,17 @@ header{
 @include responsive("large"){
     .header{
         position: relative;
+        background-color: #fff !important;
+        z-index: 10000;
         .img{
             height: 48px;
+            position: absolute;
+            left: 60px;
+
         }
         .submenu{
-            right:324px  !important;
-            top: 1px !important;
-           
+           left: 55px;
+         
         }
         .topbarinmenucell{
             flex-direction: column  !important;
@@ -197,6 +197,13 @@ header{
             position: absolute !important;
             left: 20px !important;
             top : 400px !important;
+        }
+        .navbar{
+            float: left !important;
+        }
+        .navbar-toggler-icon{
+            position: absolute;
+            left: 20px;
         }
     }
 }
