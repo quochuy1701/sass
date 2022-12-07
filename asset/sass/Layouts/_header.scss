@@ -166,16 +166,25 @@ header{
 
                         }
               }
+              .navbar-nav{
+                flex-direction: row;
+              }
               }
            }
         }
 
+}
+@include responsive("extra-large"){
+    .header{
+        display: block;
+    }
 }
 @include responsive("large"){
     .header{
         position: relative;
         background-color: #fff !important;
         z-index: 10000;
+        display: none;
         .img{
             height: 48px;
             position: absolute;
@@ -185,9 +194,6 @@ header{
         .submenu{
            left: 55px;
          
-        }
-        .topbarinmenucell{
-            flex-direction: column  !important;
         }
         .buttonlink{
             position: absolute !important;
@@ -207,3 +213,4 @@ header{
         }
     }
 }
+
